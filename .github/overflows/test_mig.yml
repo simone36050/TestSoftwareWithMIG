@@ -1,0 +1,15 @@
+name: Validate Software with External Tool
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your code
+        uses: actions/checkout@v4
+
+      - name: Run validation from Repo A
+        uses: simone36050/mig/.github/actions/run-tests@main
